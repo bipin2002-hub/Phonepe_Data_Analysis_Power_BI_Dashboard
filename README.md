@@ -1,6 +1,8 @@
 PhonePe UPI Transactions Dashboard 📊
 
-A real-time Power BI dashboard providing a comprehensive overview of UPI transactions processed through PhonePe and other UPI apps. The dashboard tracks transaction volume, value, success rates, fraud detection, and behavioral patterns across states, banks, transaction types, and time
+PhonePe UPI Transactions Dashboard
+
+This dashboard was developed to provide a real-time, comprehensive view of UPI transaction activity across India, enabling stakeholders to monitor performance, identify fraud risk, and understand user and merchant behavior at scale.
 
 📌 Overview
 This dashboard offers a real-time overview of UPI transactions, enabling stakeholders to monitor performance, detect anomalies, and analyze user behavior across multiple dimensions — geography, time, bank, transaction type, and more.
@@ -10,58 +12,54 @@ This dashboard offers a real-time overview of UPI transactions, enabling stakeho
 <img width="1242" height="752" alt="image" src="https://github.com/user-attachments/assets/a3355eaf-3e7c-4cdb-be5d-1fdb425bb298" />
 
 
-🎯 Key Metrics (KPIs)
-Metric	Description
+Key Findings
 
-Total Transaction	Total count of UPI transactions processed
+Overall Performance
 
-Total Amount	Total value (INR) of all transactions
+The platform processed 503K transactions totaling ₹442.48M in transaction value.
+The overall success rate stands at 91%, with 7% of transactions failing and a negligible 0.01% pending.
+₹3.46M was disbursed in cashback, reflecting active user incentive programs.
+17.09K transactions (~3.4%) were flagged as fraudulent, representing a key area for continued monitoring and risk mitigation.
 
-Total Cashback	Total cashback disbursed to users
+Market Position
 
-Success Rate	Percentage of successful transactions
+PhonePe leads the UPI app landscape with 48.26% share of transactions, followed by Google Pay (21.88%) and Paytm (14.89%). Amazon Pay, BHIM, Cred Pay, and WhatsApp Pay collectively account for the remaining ~12%.
 
-Total Fraud	Count of transactions flagged as fraudulent
+Geographic Distribution
 
-📈 Visualizations Included
+Transaction value is fairly evenly distributed across major states, with Maharashtra (₹45.41M), Karnataka (₹45.09M), and Delhi (₹44.79M) leading.
+Kerala is a notable outlier with significantly lower transaction value (₹1.39M), suggesting either lower market penetration or a data/regional gap worth investigating.
 
-Transaction Amount (INR) Over Time (Daily) — Area chart tracking daily transaction value trends across the month
+Banking Partners
 
-Transactions by UPI App — Donut chart showing market share split (PhonePe, Google Pay, Paytm, Amazon Pay, BHIM, Cred Pay, WhatsApp Pay)
+HDFC Bank (₹58.92M) and SBI (₹58.37M) are the top-performing banking partners by transaction value, with the remaining top 8 banks (Kotak Mahindra, Canara, ICICI, Axis, Bank of Baroda, PNB) clustered closely between ₹51M–₹56M.
 
-Transactions by Status — Donut chart of Success / Failed / Pending / Refunded transactions
+Transaction Behavior
 
-Transaction Amount (INR) by State — Choropleth map + ranked bar chart of transaction value across Indian states
+P2M (Person-to-Merchant) payments dominate transaction value at ₹188.77M (43%), more than double the next largest category, P2P (₹87.74M) — indicating the platform is used primarily for merchant payments over peer transfers.
+Bill Payments, Online Shopping, Recharge, Subscription, and Wallet Transfer make up the remaining transaction mix.
 
-Transaction Amount by Bank — Bar chart comparing transaction value across major banks (HDFC, SBI, ICICI, Axis, Kotak, Canara, PNB, BoB)
+Time-Based Patterns
 
-Total Amount by Transaction Type — Bar chart across P2M, P2P, Bill Payment, Online Shopping, Recharge, Subscription, and Wallet Transfer
+Transaction activity peaks between 6 PM–8 PM, with the highest hourly value recorded at ₹46M around 7 PM.
 
-Total Amount by Hour — Hourly distribution of transaction value to identify peak usage windows
+Activity is lowest overnight (12 AM–5 AM), consistent with expected consumer usage patterns.
 
-Total Transactions by Day & Hour — Heatmap-style matrix showing transaction volume across weekdays and hours
+Friday and Saturday show the highest transaction counts across most hours, suggesting elevated weekend spending behavior.
+Strategic Implications
 
-🎛️ Interactive Filters (Slicers)
+Fraud monitoring should remain a priority given the ~3.4% fraud rate; deeper segmentation by merchant category, failure reason, or age group could help isolate root causes.
 
-The dashboard supports dynamic slicing across:
+Regional expansion opportunity exists in states like Kerala, where transaction value significantly lags peers.
 
-Age Group,
-Payment Mode,
-City,
-Gender,
-Merchant Name
-,Merchant Category
-Failure Reason.
+Merchant payment infrastructure (P2M) is the core value driver and warrants continued investment in merchant onboarding and reliability.
 
-🛠️ Tools & Technologies
+Peak-hour capacity planning (6–8 PM, weekends) should be prioritized to maintain success rates during high-load periods.
+Filters & Segmentation Available
 
-Power BI Desktop — Dashboard development and data modeling
+The underlying dashboard supports drill-down analysis by Age Group, Payment Mode, City, Gender, Merchant Name, Merchant Category, and Failure Reason — enabling further investigation into any of the trends highlighted above.
 
-DAX — Measures for KPIs, success rate, and aggregations
-
-Power Query (M) — Data cleaning and transformation
-
-TomTom / OpenStreetMap / Microsoft Maps — Geospatial visualization for state-wise data
+Prepared using Power BI, based on UPI transaction data across Indian states, banks, and UPI applications.
 
 📂 Repository Structure
 ├──Phone pay Data Dashboard.pbix      # Power BI project file
